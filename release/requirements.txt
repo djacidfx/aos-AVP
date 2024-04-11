@@ -1,6 +1,6 @@
 certifi==2023.07.22
 chardet==3.0.4
-idna==2.7
+idna==3.7
 PyGithub==1.40
 PyJWT==2.4.0
 requests==2.20.0
