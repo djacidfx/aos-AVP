@@ -126,19 +126,38 @@ On Nova Video Player, two experimental audio passthrough modes are supported:  <
 
 <h2>Nova Video Player can’t find information on some of my videos, I’d like to add them manually.</h2>
 
-<p>Nova Video Player supports NFO file description format that follows the <a href="http://kodi.wiki/view/NFO_files/Movies">Kodi specification</a>.Advanced users can manually create them or use a dedicated tool for this task. More details are available <a href="https://github.com/nova-video-player/aos-AVP/wiki/NFO-files">here</a>.</p>
+<p>Nova Video Player supports NFO file description format that follows the <a href="https://kodi.wiki/view/NFO_files/Movies">Kodi specification</a>.Advanced users can manually create them or use a dedicated tool for this task. More details are available <a href="https://github.com/nova-video-player/aos-AVP/wiki/NFO-files">here</a>.
+Note that Nova only supports The Movie Database identifiers (tmdbid).</p>
 
 <h2>What type of subtitles are supported?</h2>
 
-<p>SRT, SUB subtitles are supported. SSA support is rudimentary. PGS subs are not yet supported.</p>
+<p>SRT, SUB, VOBSUB, PGS subtitles are supported. SSA support is rudimentary.</p>
 
 <h2>Blue screen starting nova.</h2>
 
 <p>If you get an empty blue screen at application start, just reboot your device to get in a sane state.</p>
 
-<h2>Resume points not working.</h2>
+<h2>Resume points are not working.</h2>
 
 <p>Please check if you have enabled private mode which prevents resume points to be recorded.</p>
+
+<h2>Is this possible to synchronize video resume points between devices?</h2>
+
+<p>On network shares with writeable access, after playing a video e.g. <code>video.mkv</code>, nova saves a <code>.video.mkv.archos.resume.xml</code> file containing the resume point.
+This file is recognized between devices accessing the same network share.</p>
+
+<p>Another method is to use <a href="https://trakt.tv/">Trakt</a> live scrobling feature. Do register to trakt via your PC using email address and then sign in in nova settings. 
+Note that only the last 100 played entries are synced from trakt to reduce network overhead.</p>
+
+<h2>Trakt complains about no Internet connection.</h2>
+
+<p>Trakt can report that there is no Internet connection when you use specific adblocking or a Pi-hole. In order to overcome this issue you need to whitelist these domains:</p>
+
+<p><code>
+static.criteo.net
+www.google-analytics.com
+stats.g.doubleclick.net
+</code></p>
 
 <h2>What are the different play modes.</h2>
 
@@ -151,16 +170,6 @@ On Nova Video Player, two experimental audio passthrough modes are supported:  <
 <li>Repeat folder: play all the files sequentially in the folder of the file that initiated the playback, and repeat this process in loop;</li>
 <li>Binge watching: play TV show episodes sequentially even if they are not located in the same folder and stop at the last one of the last season available.</li>
 </ul>
-
-<h2>Trakt complains about no Internet connection.</h2>
-
-<p>Trakt can report that there is no Internet connection when you use specific adblocking or a Pi-hole. In order to overcome this issue you need to whitelist these domains:</p>
-
-<p><code>
-static.criteo.net
-www.google-analytics.com
-stats.g.doubleclick.net
-</code></p>
 
 <h2>Dolby Vision and HDR.</h2>
 
