@@ -82,30 +82,28 @@ Note that on Sony Android TVs, a rescan of USB disk is triggered at each power u
 
 ## Nova Video Player can’t find information on some of my videos, I’d like to add them manually.
 
-Nova Video Player supports NFO file description format that follows the [Kodi specification](http://kodi.wiki/view/NFO_files/Movies).Advanced users can manually create them or use a dedicated tool for this task. More details are available [here](https://github.com/nova-video-player/aos-AVP/wiki/NFO-files).
+Nova Video Player supports NFO file description format that follows the [Kodi specification](https://kodi.wiki/view/NFO_files/Movies).Advanced users can manually create them or use a dedicated tool for this task. More details are available [here](https://github.com/nova-video-player/aos-AVP/wiki/NFO-files).
 Note that Nova only supports The Movie Database identifiers (tmdbid).
 
 ## What type of subtitles are supported?
 
-SRT, SUB subtitles are supported. SSA support is rudimentary. PGS subs are not yet supported.
+SRT, SUB, VOBSUB, PGS subtitles are supported. SSA support is rudimentary.
 
 ## Blue screen starting nova.
 
 If you get an empty blue screen at application start, just reboot your device to get in a sane state.
 
-## Resume points not working.
+## Resume points are not working.
 
 Please check if you have enabled private mode which prevents resume points to be recorded.
 
-## What are the different play modes.
+## Is this possible to synchronize video resume points between devices?
 
-Nova is able to play video files sequentially by choosing a play mode. This option is selectable when playing the video in one of the accessible menus. The various available play modes are:
+On network shares with writeable access, after playing a video e.g. `video.mkv`, nova saves a `.video.mkv.archos.resume.xml` file containing the resume point.
+This file is recognized between devices accessing the same network share.
 
-* Single (default one): play a single video and then stop;
-* Folder: play all the files sequentially in the folder of the file that initiated the playback and stop at after the last one has been played;
-* Repeat single: repeat in loop the video played;
-* Repeat folder: play all the files sequentially in the folder of the file that initiated the playback, and repeat this process in loop;
-* Binge watching: play TV show episodes sequentially even if they are not located in the same folder and stop at the last one of the last season available.
+Another method is to use [Trakt](https://trakt.tv/) live scrobling feature. Do register to trakt via your PC using email address and then sign in in nova settings. 
+Note that only the last 100 played entries are synced from trakt to reduce network overhead.
 
 ## Trakt complains about no Internet connection.
 
@@ -116,6 +114,16 @@ static.criteo.net
 www.google-analytics.com
 stats.g.doubleclick.net
 ```
+
+## What are the different play modes.
+
+Nova is able to play video files sequentially by choosing a play mode. This option is selectable when playing the video in one of the accessible menus. The various available play modes are:
+
+* Single (default one): play a single video and then stop;
+* Folder: play all the files sequentially in the folder of the file that initiated the playback and stop at after the last one has been played;
+* Repeat single: repeat in loop the video played;
+* Repeat folder: play all the files sequentially in the folder of the file that initiated the playback, and repeat this process in loop;
+* Binge watching: play TV show episodes sequentially even if they are not located in the same folder and stop at the last one of the last season available.
 
 ## Dolby Vision and HDR.
 
