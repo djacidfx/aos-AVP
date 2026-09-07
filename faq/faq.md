@@ -61,7 +61,7 @@ Note that:
 * Nova is only compatible with ftp(s) servers supporting "recent" 2007 MLST command ([RFC3659](https://tools.ietf.org/html/rfc3659)), e.g. with proftpd but NOT with vsftpd;
 * Nova has UPnP support but issues can be experienced with remote subtitles support (UPnP has no native support for srt files). Nova is reported not to be compatible with Serviio media server;
 * Two types of SMB protocol clients are supported: jcifs-ng (default) and smbj. jcifs-ng is the preferred and most robust mode, featuring automatic SMB protocol level negotiations (SMB1 to SMB3); on Nova releases higher than 6.4.45, a custom jcifs-ng release is used to support higher throughput. smbj is an alternate, more experimental SMB implementation supporting SMB2+ protocols;
-* sshj seems to be a faster implementation for sftp.
+* sshj seems to be a faster implementation for sftp (around 20% gain expected).
 
 ## What is the best network protocol to play high bitrate video files?
 
